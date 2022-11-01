@@ -12,7 +12,7 @@
 
 		private List<T> _listForPrint = new();
 
-		public BinaryTree(T val, BinaryTree<T>? parent = null)
+		public BinaryTree(T val, BinaryTree<T>? parent = null) 
 		{
 			_val = val;
 			_parent = parent;
