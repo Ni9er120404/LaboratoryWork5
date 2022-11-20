@@ -1,22 +1,20 @@
 ﻿namespace LaboratoryWork5
 {
-	internal class Program
+    internal class Program
 	{
 		private static void Main()
 		{
-			BinaryTree<int> binaryTree = new(5);
-
-			for (int i = 0; i < 20; i++)
+			BinaryTree<int> tree = new();
+			for(int i=0; i<10; i++)
 			{
-				binaryTree.Add(i);
+				tree.Add(i);
+			}tree.Remove(1);
+			foreach (var item in tree.Preorder())
+			{
+				Console.WriteLine(item);
 			}
 
-
-			binaryTree.Print();
-			binaryTree.Remove(7);
-			binaryTree.Print();
-
-			Console.WriteLine(binaryTree.Search(8));
+			
 		}
 	}
 }
