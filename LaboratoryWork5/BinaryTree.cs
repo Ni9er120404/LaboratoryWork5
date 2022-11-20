@@ -1,6 +1,6 @@
 ﻿namespace LaboratoryWork5
 {
-    internal class BinaryTree<T>
+	internal class BinaryTree<T>
 		where T : IComparable, IComparable<T>
 	{
 		public Node<T>? Root { get; private set; }
@@ -19,19 +19,19 @@
 			Count++;
 		}
 
-        public void Remove(T data)
-        {
-            if (Root == null)
-            {
-                Root = new Node<T>(data);
-                Count = 1;
-                return;
-            }
-            Root.Remove(data);
-            Count--;
-        }
+		public void Remove(T data)
+		{
+			if (Root == null)
+			{
+				Root = new Node<T>(data);
+				Count = 1;
+				return;
+			}
+			Root.Remove(data);
+			Count--;
+		}
 
-        private List<T> Preorder(Node<T> node)
+		private List<T> Preorder(Node<T> node)
 		{
 			List<T> list = new();
 			if (node != null)
